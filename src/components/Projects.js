@@ -95,6 +95,13 @@ const projectData = [
     image: require('../Assets/Vivace_Outline_Cropped.png'),
     description: 'Vivace on the Drive is a vibrant Italian restaurant located in the heart of Vancouver’s Commercial Drive. Our team collaborated with Vivace to elevate their online presence through targeted digital marketing strategies. From managing their social media campaigns to optimizing their Google listings and executing location-based promotions, we helped increase their customer engagement, foot traffic, and reservations. The result? A noticeable boost in visibility and a stronger connection with the local dining community.',
   },
+  {
+    id: 14,
+    title: 'Precision Plank',
+    category: 'Web Development',
+    image: require('../Assets/precision-plank-responsive-mockup.png'),
+    description: 'A premium responsive web experience for a flooring company, designed to guide homeowners from material inspiration to a fast, straightforward quote.',
+  },
 ];
 
 const categories = ['All', 'App Development', 'Web Development', 'Digital Marketing'];
