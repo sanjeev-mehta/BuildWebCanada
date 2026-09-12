@@ -1,2 +1,2 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
-body { margin:0; font-family:'Manrope',Arial,sans-serif; -webkit-font-smoothing:antialiased; } button,input,textarea { font:inherit; }
+body { margin:0; font-family:'Manrope',Arial,sans-serif; -webkit-font-smoothing:antialiased; } button,input,textarea { font:inherit; } ::selection{background:#9e85ff;color:#111526}a,button{-webkit-tap-highlight-color:transparent}@media(prefers-reduced-motion:no-preference){html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}.lenis.lenis-stopped{overflow:clip}}

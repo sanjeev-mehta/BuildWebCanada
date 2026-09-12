@@ -1,0 +1,74 @@
+.scroll-reveal{opacity:0!important;transform:translateY(42px)!important;transition:opacity .78s cubic-bezier(.16,1,.3,1),transform .78s cubic-bezier(.16,1,.3,1)!important;animation:none!important}.scroll-reveal.is-visible{opacity:1!important;transform:translateY(0)!important}.scroll-stagger{opacity:0!important;transform:translateY(28px)!important;transition:opacity .62s cubic-bezier(.16,1,.3,1) var(--reveal-delay,0ms),transform .62s cubic-bezier(.16,1,.3,1) var(--reveal-delay,0ms)!important}.scroll-stagger.is-visible{opacity:1!important;transform:translateY(0)!important}@media(prefers-reduced-motion:reduce){.scroll-reveal,.scroll-stagger{opacity:1!important;transform:none!important}}
+.restaurant-demo{--orange:#f59e0b;--navy:#101727;--cream:#fbf6ed;background:var(--cream);color:var(--navy);font-family:Georgia,serif}
+.restaurant-demo *{box-sizing:border-box}
+.restaurant-nav{height:78px;padding:0 max(5vw,24px);display:flex;align-items:center;gap:28px;background:#101727;color:#fff;font-family:Manrope,Arial,sans-serif;font-size:.73rem;font-weight:700;letter-spacing:.04em}
+.restaurant-nav a{color:inherit;text-decoration:none;transition:color .2s ease}
+.restaurant-nav a:hover{color:#f6b548}
+.restaurant-nav .demo-back{margin-right:auto;color:#f6b548}
+.demo-book{padding:12px 16px;background:var(--orange);color:#17130e!important;transition:transform .25s ease,background .25s ease!important}
+.demo-book:hover{transform:translateY(-2px);background:#ffc24f!important}
+.restaurant-hero{min-height:590px;background:#101727;color:#fff;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.restaurant-hero-copy{padding:clamp(70px,10vw,138px) 7vw;animation:restaurant-rise .8s cubic-bezier(.16,1,.3,1) both}
+.restaurant-hero-copy p,.demo-kicker{font:800 .67rem Manrope,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#d78119;margin:0 0 20px}
+.restaurant-hero h1,.restaurant-demo h2{font-size:clamp(3.6rem,6.7vw,7rem);line-height:.82;letter-spacing:-.075em;margin:0}
+.restaurant-demo h1 i,.restaurant-demo h2 i{color:#f6b548;font-weight:normal}
+.restaurant-hero-copy>a{display:inline-block;margin-top:34px;padding:14px 19px;background:#f6b548;color:#151928;text-decoration:none;font:800 .73rem Manrope,Arial,sans-serif;transition:transform .25s ease,box-shadow .25s ease}
+.restaurant-hero-copy>a:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(246,181,72,.22)}
+.restaurant-hero-image{position:relative;overflow:hidden;background:#e5a833}
+.restaurant-hero-image:after{content:'';position:absolute;inset:0;background:linear-gradient(130deg,rgba(255,255,255,.18),transparent 42%);pointer-events:none}
+.restaurant-hero-image img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;animation:restaurant-drift 12s ease-in-out infinite alternate}
+.restaurant-hero-image small{position:absolute;right:24px;bottom:22px;padding:9px 11px;background:#101727;color:#fff;font:700 .65rem Manrope,Arial,sans-serif;z-index:1;animation:restaurant-rise .7s .45s both}
+.restaurant-intro{max-width:1120px;margin:auto;padding:112px max(5vw,24px);display:grid;grid-template-columns:.85fr 1fr;gap:clamp(42px,9vw,130px);align-items:center}
+.restaurant-intro img{width:100%;aspect-ratio:1/1.05;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1),filter .4s ease}
+.restaurant-intro img:hover{transform:scale(1.035);filter:saturate(1.1)}
+.restaurant-intro h2,.restaurant-menu h2{font-size:clamp(3rem,5vw,5.6rem)}
+.restaurant-intro>div>p:not(.demo-kicker){font:1rem/1.75 Manrope,Arial,sans-serif;color:#5c6170;margin:24px 0}
+.restaurant-intro a{font:800 .75rem Manrope,Arial,sans-serif;color:#b46200;text-decoration:none}
+.restaurant-menu{padding:96px max(5vw,24px);background:#eee4d2;text-align:center}
+.restaurant-menu h2{margin-bottom:48px}
+.demo-menu-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
+.demo-menu-grid article{background:#fff;transition:transform .32s cubic-bezier(.16,1,.3,1),box-shadow .32s ease}
+.demo-menu-grid article:hover{transform:translateY(-9px);box-shadow:0 18px 34px rgba(51,34,17,.15)}
+.demo-menu-grid img{width:100%;aspect-ratio:1.25;object-fit:cover;display:block;transition:transform .5s ease}
+.demo-menu-grid article:hover img{transform:scale(1.04)}
+.demo-menu-grid article{overflow:hidden}
+.demo-menu-grid article div{padding:19px}
+.demo-menu-grid h3{font-size:1.4rem;margin:0}
+.demo-menu-grid p{font:normal .78rem/1.55 Manrope,Arial,sans-serif;color:#686b75;margin:8px 0 15px}
+.demo-menu-grid b{font:800 .83rem Manrope,Arial,sans-serif;color:#bb6700}
+.restaurant-reserve{padding:100px max(5vw,24px);background:#192239;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.restaurant-reserve h2{font-size:clamp(3.4rem,5.5vw,5.8rem)}
+.restaurant-reserve>div>p:last-child{font:normal .9rem/1.65 Manrope,Arial,sans-serif;color:#b9c0cd;max-width:370px;margin-top:24px}
+.restaurant-reserve form{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-content:start}
+.restaurant-reserve label{font:700 .67rem Manrope,Arial,sans-serif;letter-spacing:.05em}
+.restaurant-reserve input,.restaurant-reserve select{display:block;width:100%;background:transparent;border:0;border-bottom:1px solid #788096;color:#fff;padding:12px 0;outline:0;font:400 .95rem Manrope,Arial,sans-serif;transition:border-color .2s ease}
+.restaurant-reserve input:focus,.restaurant-reserve select:focus{border-color:#f6b548}
+.restaurant-reserve input::-webkit-calendar-picker-indicator{filter:invert(1)}
+.restaurant-reserve option{color:#111}
+.restaurant-reserve button{grid-column:1/-1;border:0;margin-top:9px;padding:16px;background:#f6b548;color:#151928;cursor:pointer;font:800 .75rem Manrope,Arial,sans-serif;transition:transform .2s ease,background .2s ease}
+.restaurant-reserve button:hover{transform:translateY(-2px);background:#ffc24f}
+.demo-notice{grid-column:1/-1;margin:0;color:#f6c96f;font:600 .75rem Manrope,Arial,sans-serif}
+.restaurant-footer{padding:30px max(5vw,24px);background:#101727;color:#d6dae4;display:flex;justify-content:space-between;gap:22px;align-items:center;font:500 .68rem Manrope,Arial,sans-serif}
+.restaurant-footer span{color:#f6b548;font-weight:800;letter-spacing:.1em}
+.restaurant-footer a{color:#fff}
+.restaurant-intro,.restaurant-menu,.restaurant-reserve{animation:restaurant-rise .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 8% cover 26%}
+@keyframes restaurant-rise{from{opacity:0;transform:translateY(28px)}
+to{opacity:1;transform:translateY(0)}
+}
+@keyframes restaurant-drift{from{transform:scale(1)}
+to{transform:scale(1.06) translate(-1.2%,-.8%)}
+}
+@media(prefers-reduced-motion:reduce){.restaurant-demo *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+@media(max-width:720px){.restaurant-nav{gap:15px;height:64px}
+.restaurant-nav>a:not(.demo-back):not(.demo-book){display:none}
+.restaurant-hero{grid-template-columns:1fr;min-height:0}
+.restaurant-hero-copy{padding:80px 8vw}
+.restaurant-hero-image{height:330px}
+.restaurant-intro,.restaurant-reserve{grid-template-columns:1fr;padding-block:72px;gap:42px}
+.restaurant-intro img{max-height:390px}
+.demo-menu-grid{grid-template-columns:1fr}
+.restaurant-reserve form{grid-template-columns:1fr}
+.restaurant-footer{display:block;line-height:1.7}
+.restaurant-footer p{margin:10px 0}
+}
