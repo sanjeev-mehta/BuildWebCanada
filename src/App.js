@@ -27,6 +27,7 @@ import SalonDemo from './components/SalonDemo.js';
 import LiquorStoreDemo from './components/LiquorStoreDemo.js';
 import PhotographyDemo from './components/PhotographyDemo.js';
 import Seo from './components/Seo.js';
+import Faq from './components/Faq.js';
 import { useLocation } from 'react-router-dom';
 
 function ScrollReveal({ children, delay = 0 }) {
@@ -47,6 +48,7 @@ function HomeContent({ cursorPos }) {
       <ScrollReveal><TechStack /></ScrollReveal>
       <ScrollReveal><Process /></ScrollReveal>
       <ScrollReveal><section id="about"><About /></section></ScrollReveal>
+      <ScrollReveal><Faq /></ScrollReveal>
       <ScrollReveal><section id="contact"><Contact /></section></ScrollReveal>
       <Footer />
       <div

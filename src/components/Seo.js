@@ -91,8 +91,24 @@ export default function Seo() {
       };
       if (!structuredData) { structuredData = document.createElement('script'); structuredData.id = 'buildwebcanada-organization-schema'; structuredData.type = 'application/ld+json'; document.head.appendChild(structuredData); }
       structuredData.textContent = JSON.stringify(schema);
+      const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What does a website project with BuildWebCanada include?', acceptedAnswer: { '@type': 'Answer', text: 'Each project is scoped around your business goals. Typical work can include strategy, UX/UI design, responsive development, content structure, search-ready foundations, and launch support.' } },
+          { '@type': 'Question', name: 'How long does it take to build a website?', acceptedAnswer: { '@type': 'Answer', text: 'The timeline depends on the project scope, content readiness, and feedback cycle. A focused marketing website can move quickly, while larger sites and custom features need more planning and production time.' } },
+          { '@type': 'Question', name: 'Do you build mobile apps as well as websites?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BuildWebCanada works on websites, digital products, and mobile app experiences for iOS and Android.' } },
+          { '@type': 'Question', name: 'Can you redesign an existing website?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We can review your current site, identify what is holding it back, and redesign the experience around clearer positioning, stronger performance, and better conversion paths.' } },
+          { '@type': 'Question', name: 'Do you work with businesses outside Vancouver and Calgary?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We work remotely with businesses across Canada and beyond, with a process designed to keep communication and approvals straightforward.' } },
+          { '@type': 'Question', name: 'Will you support the website after launch?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Ongoing support can be planned around updates, optimisation, new features, and future growth after the initial launch.' } },
+        ],
+      };
+      let faqStructuredData = document.head.querySelector('#buildwebcanada-faq-schema');
+      if (!faqStructuredData) { faqStructuredData = document.createElement('script'); faqStructuredData.id = 'buildwebcanada-faq-schema'; faqStructuredData.type = 'application/ld+json'; document.head.appendChild(faqStructuredData); }
+      faqStructuredData.textContent = JSON.stringify(faqSchema);
     } else if (structuredData) {
       structuredData.remove();
+      document.head.querySelector('#buildwebcanada-faq-schema')?.remove();
     }
   }, [pathname]);
   return null;
