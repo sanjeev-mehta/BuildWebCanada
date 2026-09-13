@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './WebTemplates.css';
+import './WebTemplatesOverrides.css';
 import restaurantHome from '../Assets/restaurant-template-home.jpg';
 import cleaningHome from '../Assets/cleaning-template-home.png';
 import italianHome from '../Assets/italian-banner.webp';
@@ -8,6 +9,8 @@ import constructionHome from '../Assets/construction-hero-original.png';
 import renovationHome from '../Assets/renovation-hero-original.png';
 import tattooHome from '../Assets/tattoo-hero-original.png';
 import salonHome from '../Assets/salon-hero-original.png';
+import liquorHome from '../Assets/liquor-store-hero-original.png';
+import photographyHome from '../Assets/photography-hero-original.png';
 
 const templates = [
   { name: 'Restaurant', eyebrow: 'Dining & hospitality', accent: 'terracotta', icon: '✦', image: restaurantHome, description: 'A warm, conversion-focused menu and reservation experience for memorable local dining.' },
@@ -17,6 +20,8 @@ const templates = [
   { name: 'Renovation', eyebrow: 'Trades & building', accent: 'renovation', icon: '◈', image: renovationHome, description: 'A considered renovation template for refined spaces and ambitious transformations.' },
   { name: 'Tattoo Artist', eyebrow: 'Creative studio', accent: 'rose', icon: '✺', image: tattooHome, description: 'An expressive portfolio that puts the artist’s work, style, and booking process first.' },
   { name: 'Salon', eyebrow: 'Beauty & wellness', accent: 'lilac', icon: '✦', image: salonHome, description: 'A refined appointment-ready site for services, stylists, and a beautiful client experience.' },
+  { name: 'Liquor Store', eyebrow: 'Retail & hospitality', accent: 'gold', icon: '◉', image: liquorHome, description: 'A premium product-led storefront for curated bottles, local discovery, and memorable occasions.' },
+  { name: 'Photography', eyebrow: 'Creative & editorial', accent: 'rose', icon: '◐', image: photographyHome, description: 'A cinematic, gallery-first home for wedding photographers and editorial storytellers.' },
 ];
 
 const WebTemplates = () => (
@@ -46,8 +51,8 @@ const WebTemplates = () => (
             <p>{template.eyebrow}</p>
             <div className="template-heading"><span>{template.icon}</span><h2>{template.name}</h2></div>
             <p className="template-description">{template.description}</p>
-            <Link to={template.name === 'Restaurant' ? '/web-templates/restaurant' : template.name === 'Italian Restaurant' ? '/web-templates/italian-restaurant' : template.name === 'Cleaning' ? '/web-templates/cleaning' : template.name === 'Construction' ? '/web-templates/construction' : template.name === 'Renovation' ? '/web-templates/renovation' : template.name === 'Tattoo Artist' ? '/web-templates/tattoo-artist' : template.name === 'Salon' ? '/web-templates/salon' : '/#contact'}>
-              {['Restaurant', 'Italian Restaurant', 'Cleaning', 'Construction', 'Renovation', 'Tattoo Artist', 'Salon'].includes(template.name) ? 'View demo' : 'Customize this template'} <span>→</span>
+            <Link to={template.name === 'Restaurant' ? '/web-templates/restaurant' : template.name === 'Italian Restaurant' ? '/web-templates/italian-restaurant' : template.name === 'Cleaning' ? '/web-templates/cleaning' : template.name === 'Construction' ? '/web-templates/construction' : template.name === 'Renovation' ? '/web-templates/renovation' : template.name === 'Tattoo Artist' ? '/web-templates/tattoo-artist' : template.name === 'Salon' ? '/web-templates/salon' : template.name === 'Liquor Store' ? '/web-templates/liquor-store' : template.name === 'Photography' ? '/web-templates/photography' : '/#contact'}>
+              {['Restaurant', 'Italian Restaurant', 'Cleaning', 'Construction', 'Renovation', 'Tattoo Artist', 'Salon', 'Liquor Store', 'Photography'].includes(template.name) ? 'View demo' : 'Customize this template'} <span>→</span>
             </Link>
           </div>
         </article>

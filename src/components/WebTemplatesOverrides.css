@@ -1,0 +1,6 @@
+@media (min-width: 701px) {
+  .template-grid .template-card:last-child {
+    grid-column: auto;
+    display: block;
+  }
+}

@@ -44,6 +44,6 @@ export default function SalonDemo() {
 
     <section className="salon-appointment" id="book-salon"><img src={hero} alt="" /><div className="salon-appointment-card salon-reveal" id="contact-salon"><div><p className="salon-kicker">Your appointment</p><h2>A little time<br />for <i>yourself.</i></h2><p>Choose a service and send a demo request. Nothing is submitted—this is a showcase template.</p><form onSubmit={(event) => { event.preventDefault(); setNotice('Demo only — your request was not sent.'); }}><select defaultValue="" aria-label="Choose a service"><option value="" disabled>Choose a service</option><option>Signature Cut</option><option>Dimensional Colour</option><option>Finishing Touch</option></select><button type="submit">Request a session <span>↗</span></button></form>{notice && <small role="status">{notice}</small>}</div><img src={portrait} alt="Original beauty portrait" /></div></section>
 
-    <footer className="salon-footer"><strong>ATELIER MUSE</strong><span>Fictional salon template · Vancouver, BC</span><Link to="/web-templates">All templates</Link></footer>
+    <footer className="salon-footer"><strong>ATELIER MUSE</strong><span>Fictional salon template · Vancouver, BC</span><small>© {new Date().getFullYear()} BuildWebCanada. All rights reserved.</small><Link to="/web-templates">All templates</Link></footer>
   </main>;
 }
