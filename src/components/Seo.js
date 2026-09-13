@@ -1,0 +1,58 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import restaurantImage from '../Assets/restaurant-template-home.jpg';
+import cleaningImage from '../Assets/cleaning-template-home.png';
+import italianImage from '../Assets/italian-banner.webp';
+import constructionImage from '../Assets/construction-hero-original.png';
+import renovationImage from '../Assets/renovation-hero-original.png';
+import tattooImage from '../Assets/tattoo-hero-original.png';
+import salonImage from '../Assets/salon-hero-original.png';
+import liquorImage from '../Assets/liquor-store-hero-original.png';
+import photographyImage from '../Assets/photography-hero-original.png';
+
+const siteUrl = 'https://buildwebcanada.ca';
+const defaultImage = `${siteUrl}/open-graph.png`;
+
+const pages = {
+  '/': { title: 'Web Design, Development & Mobile Apps in Canada | BuildWebCanada', description: 'BuildWebCanada designs and develops high-performing websites, mobile apps, and digital products for ambitious businesses across Canada.', image: defaultImage },
+  '/projects': { title: 'Digital Product & Website Projects | BuildWebCanada', description: 'Explore selected websites, mobile apps, digital products, and growth-focused work created by BuildWebCanada.', image: defaultImage },
+  '/web-templates': { title: 'Website Design Templates for Canadian Businesses | BuildWebCanada', description: 'Explore original website template directions for restaurants, home services, construction, salons, photographers, retail, and more.', image: defaultImage },
+  '/web-templates/restaurant': { title: 'Restaurant Website Template Demo | BuildWebCanada', description: 'Explore a polished restaurant website template with menu, reservation, and hospitality-focused content.', image: restaurantImage },
+  '/web-templates/italian-restaurant': { title: 'Italian Restaurant Website Template Demo | BuildWebCanada', description: 'Explore an elegant Italian restaurant website template made for seasonal menus and memorable dining experiences.', image: italianImage },
+  '/web-templates/cleaning': { title: 'Cleaning Service Website Template Demo | BuildWebCanada', description: 'Explore a conversion-focused cleaning service website template built for estimates, services, and local trust.', image: cleaningImage },
+  '/web-templates/construction': { title: 'Construction Company Website Template Demo | BuildWebCanada', description: 'Explore a modern construction website template for showcasing projects and generating estimate requests.', image: constructionImage },
+  '/web-templates/renovation': { title: 'Renovation Company Website Template Demo | BuildWebCanada', description: 'Explore a refined renovation website template for residential transformations and design-led builders.', image: renovationImage },
+  '/web-templates/tattoo-artist': { title: 'Tattoo Artist Website Template Demo | BuildWebCanada', description: 'Explore an expressive tattoo artist website template for portfolios, available sessions, and booking inquiries.', image: tattooImage },
+  '/web-templates/salon': { title: 'Salon Website Template Demo | BuildWebCanada', description: 'Explore a premium salon website template for services, client experience, and appointment discovery.', image: salonImage },
+  '/web-templates/liquor-store': { title: 'Liquor Store Website Template Demo | BuildWebCanada', description: 'Explore a premium liquor store website template for curated collections, local pickup, and product discovery.', image: liquorImage },
+  '/web-templates/photography': { title: 'Wedding Photography Website Template Demo | BuildWebCanada', description: 'Explore a cinematic wedding photography website template with portfolio storytelling and elegant inquiry design.', image: photographyImage },
+};
+
+function setMeta(attribute, key, value) {
+  let element = document.head.querySelector(`meta[${attribute}="${key}"]`);
+  if (!element) { element = document.createElement('meta'); element.setAttribute(attribute, key); document.head.appendChild(element); }
+  element.setAttribute('content', value);
+}
+
+export default function Seo() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    const page = pages[pathname] || pages['/'];
+    const canonical = `${siteUrl}${pathname === '/' ? '/' : pathname}`;
+    const image = page.image.startsWith('http') ? page.image : `${siteUrl}${page.image}`;
+    document.title = page.title;
+    setMeta('name', 'description', page.description);
+    setMeta('property', 'og:title', page.title);
+    setMeta('property', 'og:description', page.description);
+    setMeta('property', 'og:url', canonical);
+    setMeta('property', 'og:image', image);
+    setMeta('property', 'og:image:alt', page.title);
+    setMeta('name', 'twitter:title', page.title);
+    setMeta('name', 'twitter:description', page.description);
+    setMeta('name', 'twitter:image', image);
+    let link = document.head.querySelector('link[rel="canonical"]');
+    if (!link) { link = document.createElement('link'); link.setAttribute('rel', 'canonical'); document.head.appendChild(link); }
+    link.setAttribute('href', canonical);
+  }, [pathname]);
+  return null;
+}

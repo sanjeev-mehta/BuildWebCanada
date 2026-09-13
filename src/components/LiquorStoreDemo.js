@@ -16,10 +16,10 @@ export default function LiquorStoreDemo() {
     }
   };
 
-  return <iframe
+  return <main className="liquor-template-page"><h1 className="seo-only-heading">Liquor Store Website Template Demo</h1><iframe
     title="North & Oak liquor store template"
     src="/north-oak-demo/index.html"
     className="north-oak-frame"
     onLoad={addMotionStyles}
-  />;
+  /></main>;
 }
