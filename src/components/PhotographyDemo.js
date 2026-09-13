@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './PhotographyDemo.css';
+import './PhotographyMobile.css';
 import hero from '../Assets/photography-hero-original.png';
 import coast from '../Assets/photography-coast-original.png';
 
