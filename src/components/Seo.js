@@ -26,6 +26,9 @@ const pages = {
   '/web-templates/salon': { title: 'Salon Website Template Demo | BuildWebCanada', description: 'Explore a premium salon website template for services, client experience, and appointment discovery.', image: salonImage },
   '/web-templates/liquor-store': { title: 'Liquor Store Website Template Demo | BuildWebCanada', description: 'Explore a premium liquor store website template for curated collections, local pickup, and product discovery.', image: liquorImage },
   '/web-templates/photography': { title: 'Wedding Photography Website Template Demo | BuildWebCanada', description: 'Explore a cinematic wedding photography website template with portfolio storytelling and elegant inquiry design.', image: photographyImage },
+  '/web-design-vancouver': { title: 'Web Design Vancouver | BuildWebCanada', description: 'Strategic web design in Vancouver for businesses that need a high-performing, conversion-focused digital presence.', image: defaultImage },
+  '/web-development-calgary': { title: 'Web Development Calgary | BuildWebCanada', description: 'Modern web development in Calgary for fast, scalable, search-ready business websites.', image: defaultImage },
+  '/mobile-app-development-canada': { title: 'Mobile App Development Canada | BuildWebCanada', description: 'Mobile app design and development in Canada for businesses building useful iOS and Android digital products.', image: defaultImage },
 };
 
 function setMeta(attribute, key, value) {

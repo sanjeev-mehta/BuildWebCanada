@@ -1,0 +1,1 @@
+.service-title-link{color:inherit;text-decoration:none}.service-title-link h3{display:inline-block}.service-title-link h3::after{content:' ↗';font-size:.55em;color:#c6adff;opacity:0;transition:opacity .2s}.service-tile:hover .service-title-link h3::after{opacity:1}

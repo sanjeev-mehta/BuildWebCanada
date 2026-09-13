@@ -28,6 +28,7 @@ import LiquorStoreDemo from './components/LiquorStoreDemo.js';
 import PhotographyDemo from './components/PhotographyDemo.js';
 import Seo from './components/Seo.js';
 import Faq from './components/Faq.js';
+import ServicePage from './components/ServicePage.js';
 import { useLocation } from 'react-router-dom';
 
 function ScrollReveal({ children, delay = 0 }) {
@@ -105,6 +106,9 @@ function App() {
             <Route path="/web-templates/salon" element={<SalonDemo />} />
             <Route path="/web-templates/liquor-store" element={<LiquorStoreDemo />} />
             <Route path="/web-templates/photography" element={<PhotographyDemo />} />
+            <Route path="/web-design-vancouver" element={<ServicePage service="web-design-vancouver" />} />
+            <Route path="/web-development-calgary" element={<ServicePage service="web-development-calgary" />} />
+            <Route path="/mobile-app-development-canada" element={<ServicePage service="mobile-app-development-canada" />} />
           </Routes>
         </motion.div>
       </AnimatePresence>
