@@ -22,6 +22,8 @@ import CleaningDemo from './components/CleaningDemo.js';
 import ItalianRestaurantDemo from './components/ItalianRestaurantDemo.js';
 import ConstructionDemo from './components/ConstructionDemo.js';
 import RenovationDemo from './components/RenovationDemo.js';
+import TattooDemo from './components/TattooDemo.js';
+import SalonDemo from './components/SalonDemo.js';
 import { useLocation } from 'react-router-dom';
 
 function ScrollReveal({ children, delay = 0 }) {
@@ -81,7 +83,7 @@ function App() {
 
   return (
     <div className="App" onMouseMove={handleMouseMove}>
-      {!['/web-templates/restaurant', '/web-templates/cleaning', '/web-templates/italian-restaurant', '/web-templates/construction', '/web-templates/renovation'].includes(location.pathname) && <Navbar />}
+      {!['/web-templates/restaurant', '/web-templates/cleaning', '/web-templates/italian-restaurant', '/web-templates/construction', '/web-templates/renovation', '/web-templates/tattoo-artist', '/web-templates/salon'].includes(location.pathname) && <Navbar />}
       <AnimatePresence mode="wait">
         <motion.div key={location.pathname} className="route-transition" initial={reducedMotion ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={reducedMotion ? {} : { opacity: 0, y: -7 }} transition={{ duration: reducedMotion ? 0 : 0.38, ease: [0.16, 1, 0.3, 1] }}>
           <Routes location={location}>
@@ -93,6 +95,8 @@ function App() {
             <Route path="/web-templates/italian-restaurant" element={<ItalianRestaurantDemo />} />
             <Route path="/web-templates/construction" element={<ConstructionDemo />} />
             <Route path="/web-templates/renovation" element={<RenovationDemo />} />
+            <Route path="/web-templates/tattoo-artist" element={<TattooDemo />} />
+            <Route path="/web-templates/salon" element={<SalonDemo />} />
           </Routes>
         </motion.div>
       </AnimatePresence>

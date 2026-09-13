@@ -6,6 +6,7 @@ import aboutDish from '../Assets/urban-bites-about.jpg';
 import menuOne from '../Assets/urban-bites-menu-1.jpg';
 import menuTwo from '../Assets/urban-bites-menu-2.jpg';
 import menuThree from '../Assets/urban-bites-menu-3.jpg';
+import TemplateHeroMotion from './TemplateHeroMotion';
 
 const menu = [
   { name: 'Truffle Tagliatelle', detail: 'Wild mushrooms, parmesan, herbs', price: '$24', image: menuOne },
@@ -40,7 +41,7 @@ export default function RestaurantDemo() {
         <a href="#menu">Menu</a><a href="#story">Our story</a>
         <a href="#reserve" className="demo-book">Book a table</a>
       </header>
-      <section className="restaurant-hero">
+      <section className="restaurant-hero"><TemplateHeroMotion variant="restaurant" />
         <div className="restaurant-hero-copy"><p>Modern Italian kitchen · Vancouver</p><h1>Made for the<br /><i>good moments.</i></h1><a href="#reserve">Reserve your table <span>→</span></a></div>
         <div className="restaurant-hero-image"><img src={heroDish} alt="A plated Urban Bites dish" fetchPriority="high" /><small>Est. 2011</small></div>
       </section>

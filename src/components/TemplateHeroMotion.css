@@ -1,0 +1,33 @@
+.template-hero-motion{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+.restaurant-hero,.clean-hero,.italian-hero,.build-hero,.reno-hero,.ink-hero{position:relative}.clean-hero-content,.italian-hero-copy,.build-hero-copy,.build-coordinates,.ink-hero>div:last-of-type,.ink-hero>span,.ink-hero aside{z-index:2}.restaurant-hero .template-hero-motion,.reno-hero .template-hero-motion{z-index:3}.restaurant-hero-copy,.restaurant-hero-image,.reno-hero-copy,.reno-hero-image{position:relative;z-index:2}
+.template-hero-motion span{position:absolute}
+.motion-glow{width:42vw;height:42vw;border-radius:50%;filter:blur(18px);opacity:.24}
+.motion-line{inset:-25%;opacity:.17}
+.motion-grain{inset:0;opacity:.14;background-image:radial-gradient(circle at 20% 30%,rgba(255,255,255,.85) 0 1px,transparent 1.5px);background-size:7px 7px;mix-blend-mode:soft-light}
+.motion-restaurant .motion-glow{right:-10%;top:4%;background:#f3b98d;animation:hero-float 9s ease-in-out infinite alternate}
+.motion-restaurant .motion-line{background:linear-gradient(110deg,transparent 42%,rgba(255,223,188,.8) 50%,transparent 58%);animation:hero-sweep 8s ease-in-out infinite}
+.motion-cleaning .motion-glow{left:-11%;bottom:-18%;background:#ccf0d1;animation:hero-float 11s ease-in-out infinite alternate-reverse}
+.motion-cleaning .motion-line{background:linear-gradient(130deg,transparent 35%,rgba(255,255,255,.85) 50%,transparent 65%);animation:hero-sweep 10s ease-in-out infinite}
+.motion-italian .motion-glow{right:12%;bottom:-25%;background:#e8a647;animation:hero-float 12s ease-in-out infinite alternate}
+.motion-italian .motion-line{border:1px solid rgba(255,217,150,.7);border-radius:50%;transform:scale(.65);animation:hero-ring 12s linear infinite}
+.motion-construction .motion-glow{right:-14%;top:-24%;background:#d8ee74;animation:hero-float 10s ease-in-out infinite alternate}
+.motion-construction .motion-line{background-image:linear-gradient(rgba(216,238,116,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(216,238,116,.6) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(90deg,transparent,black 70%);animation:hero-grid 18s linear infinite}
+.motion-renovation .motion-glow{left:12%;top:5%;background:#e8a07b;animation:hero-float 13s ease-in-out infinite alternate}
+.motion-renovation .motion-line{background:linear-gradient(90deg,transparent,rgba(255,229,207,.8),transparent);transform:rotate(-24deg);animation:hero-sweep 11s ease-in-out infinite}
+.motion-tattoo .motion-glow{right:7%;top:9%;background:#cf3e3a;filter:blur(40px);animation:hero-pulse 5s ease-in-out infinite}
+.motion-tattoo .motion-line{border:1px solid rgba(232,82,77,.75);border-radius:50%;transform:scale(.58);animation:hero-ring 15s linear infinite}
+.motion-tattoo .motion-grain{opacity:.3;mix-blend-mode:screen}
+.motion-salon .motion-glow{right:7%;bottom:-20%;background:#f2bfc0;animation:hero-float 12s ease-in-out infinite alternate}.motion-salon .motion-line{border:1px solid rgba(255,225,224,.75);border-radius:50%;transform:scale(.62);animation:hero-ring 16s linear infinite}
+@keyframes hero-float{to{transform:translate(-5%,8%) scale(1.16)}
+}
+@keyframes hero-sweep{0%,35%{transform:translateX(-70%) rotate(-12deg)}
+65%,100%{transform:translateX(75%) rotate(-12deg)}
+}
+@keyframes hero-ring{to{transform:scale(1.05) rotate(360deg)}
+}
+@keyframes hero-grid{to{transform:translate(64px,64px)}
+}
+@keyframes hero-pulse{50%{opacity:.45;transform:scale(1.16)}
+}
+@media(prefers-reduced-motion:reduce){.template-hero-motion *{animation:none!important}
+}
