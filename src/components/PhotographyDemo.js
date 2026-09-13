@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './PhotographyDemo.css';
 import './PhotographyMobile.css';
 import './PhotographyMotion.css';
+import './PhotographyInquiry.css';
 import hero from '../Assets/photography-hero-original.png';
 import coast from '../Assets/photography-coast-original.png';
 
@@ -28,7 +29,7 @@ export default function PhotographyDemo() {
     <section className="photo-manifesto photo-reveal" id="photo-about"><p>For the wildly devoted</p><h2>Images with<br />a <i>pulse.</i></h2><span>Every celebration has an atmosphere all its own. Lumen Stories is a fictional photography studio designed to hold onto the glances, movement, and feeling that make it yours.</span></section>
     <section className="photo-work" id="photo-work"><div className="photo-work-head photo-reveal"><p>Selected stories</p><h2>Love, in its<br /><i>own light.</i></h2></div><div className="photo-mobile-film" aria-hidden="true"><span>01</span><i>✦</i><span>02</span><i>✦</i><span>03</span></div><div className="photo-grid"><article className="photo-reveal"><img src={hero} alt="Original conservatory celebration" /><h3><b>01</b> The midnight conservatory</h3></article><article className="photo-reveal photo-coast"><img src={coast} alt="Original coastal wedding scene" /><h3><b>02</b> Salt air & vows</h3></article><article className="photo-reveal photo-detail"><img src={hero} alt="Original wedding detail" /><h3><b>03</b> After the last toast</h3></article></div></section>
     <section className="photo-quote"><p className="photo-reveal">“There is a kind of magic in remembering exactly how it felt.”</p><span className="photo-reveal">— A quiet promise from Lumen Stories</span></section>
-    <section className="photo-inquire" id="photo-inquire"><img src={coast} alt="" /><div className="photo-inquire-copy photo-reveal"><p>Now booking 2026</p><h2>Let’s make<br />something <i>lasting.</i></h2><a href="mailto:hello@example.com">Start an inquiry <b>↗</b></a><small>Demo template · no form submission</small></div></section>
+    <section className="photo-inquire" id="photo-inquire"><img src={coast} alt="" /><div className="photo-inquire-copy photo-reveal"><p>Now booking 2026</p><h2>Let’s make<br />something <i>lasting.</i></h2><span className="photo-inquiry-label">Start an inquiry <b aria-hidden="true">✦</b></span><small>Demo template · no form submission</small></div></section>
     <footer className="photo-footer"><strong>LUMEN STORIES</strong><span>Fictional photography template · Vancouver, BC</span><small>© {new Date().getFullYear()} BuildWebCanada. All rights reserved.</small><Link to="/web-templates">All templates</Link></footer>
   </main>;
 }
