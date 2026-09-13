@@ -53,6 +53,47 @@ export default function Seo() {
     let link = document.head.querySelector('link[rel="canonical"]');
     if (!link) { link = document.createElement('link'); link.setAttribute('rel', 'canonical'); document.head.appendChild(link); }
     link.setAttribute('href', canonical);
+    let structuredData = document.head.querySelector('#buildwebcanada-organization-schema');
+    if (pathname === '/') {
+      const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'ProfessionalService',
+        '@id': `${siteUrl}/#organization`,
+        name: 'BuildWebCanada',
+        url: siteUrl,
+        logo: `${siteUrl}/buildwebcanada-icon-512.png`,
+        image: defaultImage,
+        description: 'BuildWebCanada designs and develops high-performing websites, mobile apps, and digital products for ambitious businesses across Canada.',
+        email: 'buildwebcanada@gmail.com',
+        telephone: ['+1-778-996-9060', '+1-778-930-3838'],
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '3800 Fonda Way',
+          addressLocality: 'Calgary',
+          addressRegion: 'AB',
+          postalCode: 'T2A 6G8',
+          addressCountry: 'CA',
+        },
+        areaServed: [{ '@type': 'Country', name: 'Canada' }, { '@type': 'City', name: 'Vancouver' }, { '@type': 'City', name: 'Calgary' }],
+        sameAs: ['https://www.instagram.com/buildwebcanada/'],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'customer service',
+          email: 'buildwebcanada@gmail.com',
+          telephone: '+1-778-996-9060',
+          availableLanguage: ['English'],
+        },
+        makesOffer: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Website Design and Development' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile App Development' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'UI/UX and Product Design' } },
+        ],
+      };
+      if (!structuredData) { structuredData = document.createElement('script'); structuredData.id = 'buildwebcanada-organization-schema'; structuredData.type = 'application/ld+json'; document.head.appendChild(structuredData); }
+      structuredData.textContent = JSON.stringify(schema);
+    } else if (structuredData) {
+      structuredData.remove();
+    }
   }, [pathname]);
   return null;
 }
