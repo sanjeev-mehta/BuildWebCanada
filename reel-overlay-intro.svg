@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#0b1020"/>
+  <circle cx="880" cy="270" r="420" fill="#6f43d6" opacity=".32"/>
+  <circle cx="160" cy="1660" r="530" fill="#1e4c9a" opacity=".26"/>
+  <text x="540" y="700" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="58" font-weight="700">YOUR BUSINESS DESERVES</text>
+  <text x="540" y="780" text-anchor="middle" fill="#a678ff" font-family="Arial, sans-serif" font-size="58" font-weight="700">A WEBSITE THAT CONVERTS.</text>
+  <rect x="384" y="1035" width="312" height="2" fill="#a678ff"/>
+  <text x="540" y="1100" text-anchor="middle" fill="#d6d3e2" font-family="Arial, sans-serif" font-size="28" letter-spacing="5">BUILDWEBCANADA.CA</text>
+</svg>

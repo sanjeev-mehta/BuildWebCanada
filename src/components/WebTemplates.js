@@ -11,6 +11,7 @@ import tattooHome from '../Assets/tattoo-hero-original.png';
 import salonHome from '../Assets/salon-hero-original.png';
 import liquorHome from '../Assets/liquor-store-hero-original.png';
 import photographyHome from '../Assets/photography-hero-original.png';
+import artisanHome from '../Assets/artisan-template-home.png';
 
 const templates = [
   { name: 'Restaurant', eyebrow: 'Dining & hospitality', accent: 'terracotta', icon: '✦', image: restaurantHome, description: 'A warm, conversion-focused menu and reservation experience for memorable local dining.' },
@@ -18,6 +19,7 @@ const templates = [
   { name: 'Cleaning', eyebrow: 'Home services', accent: 'sky', icon: '✳', image: cleaningHome, description: 'A polished service site that makes it simple to request a quote and book a clean.' },
   { name: 'Construction', eyebrow: 'Trades & building', accent: 'gold', icon: '◫', image: constructionHome, description: 'Built to establish credibility, showcase projects, and turn visits into estimate requests.' },
   { name: 'Renovation', eyebrow: 'Trades & building', accent: 'renovation', icon: '◈', image: renovationHome, description: 'A considered renovation template for refined spaces and ambitious transformations.' },
+  { name: 'Artisan Home Services', eyebrow: 'Home services', accent: 'renovation', icon: '◈', image: artisanHome, description: 'A premium home-services concept built around craftsmanship, process, and real project work.' },
   { name: 'Tattoo Artist', eyebrow: 'Creative studio', accent: 'rose', icon: '✺', image: tattooHome, description: 'An expressive portfolio that puts the artist’s work, style, and booking process first.' },
   { name: 'Salon', eyebrow: 'Beauty & wellness', accent: 'lilac', icon: '✦', image: salonHome, description: 'A refined appointment-ready site for services, stylists, and a beautiful client experience.' },
   { name: 'Liquor Store', eyebrow: 'Retail & hospitality', accent: 'gold', icon: '◉', image: liquorHome, description: 'A premium product-led storefront for curated bottles, local discovery, and memorable occasions.' },
@@ -51,8 +53,8 @@ const WebTemplates = () => (
             <p>{template.eyebrow}</p>
             <div className="template-heading"><span>{template.icon}</span><h2>{template.name}</h2></div>
             <p className="template-description">{template.description}</p>
-            <Link to={template.name === 'Restaurant' ? '/web-templates/restaurant' : template.name === 'Italian Restaurant' ? '/web-templates/italian-restaurant' : template.name === 'Cleaning' ? '/web-templates/cleaning' : template.name === 'Construction' ? '/web-templates/construction' : template.name === 'Renovation' ? '/web-templates/renovation' : template.name === 'Tattoo Artist' ? '/web-templates/tattoo-artist' : template.name === 'Salon' ? '/web-templates/salon' : template.name === 'Liquor Store' ? '/web-templates/liquor-store' : template.name === 'Photography' ? '/web-templates/photography' : '/#contact'}>
-              {['Restaurant', 'Italian Restaurant', 'Cleaning', 'Construction', 'Renovation', 'Tattoo Artist', 'Salon', 'Liquor Store', 'Photography'].includes(template.name) ? 'View demo' : 'Customize this template'} <span>→</span>
+            <Link onClick={(event) => { if (template.name === 'Artisan Home Services') { event.preventDefault(); window.location.assign('/templates/artisan/'); } }} to={template.name === 'Artisan Home Services' ? '/templates/artisan/' : template.name === 'Restaurant' ? '/web-templates/restaurant' : template.name === 'Italian Restaurant' ? '/web-templates/italian-restaurant' : template.name === 'Cleaning' ? '/web-templates/cleaning' : template.name === 'Construction' ? '/web-templates/construction' : template.name === 'Renovation' ? '/web-templates/renovation' : template.name === 'Tattoo Artist' ? '/web-templates/tattoo-artist' : template.name === 'Salon' ? '/web-templates/salon' : template.name === 'Liquor Store' ? '/web-templates/liquor-store' : template.name === 'Photography' ? '/web-templates/photography' : '/#contact'}>
+              {['Restaurant', 'Italian Restaurant', 'Cleaning', 'Construction', 'Renovation', 'Artisan Home Services', 'Tattoo Artist', 'Salon', 'Liquor Store', 'Photography'].includes(template.name) ? 'View demo' : 'Customize this template'} <span>→</span>
             </Link>
           </div>
         </article>

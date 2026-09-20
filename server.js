@@ -38,6 +38,11 @@ http.createServer((request, response) => {
   const safePath = candidate.startsWith(`${root}${path.sep}`) ? candidate : root;
 
   fs.stat(safePath, (error, stats) => {
+    if (!error && stats.isDirectory()) {
+      sendFile(response, path.join(safePath, "index.html"));
+      return;
+    }
+
     if (!error && stats.isFile()) {
       sendFile(response, safePath);
       return;
