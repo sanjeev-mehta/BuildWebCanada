@@ -4,7 +4,7 @@ import './WebTemplates.css';
 import './WebTemplatesOverrides.css';
 import restaurantHome from '../Assets/restaurant-template-home.jpg';
 import cleaningHome from '../Assets/cleaning-template-home.png';
-import italianHome from '../Assets/italian-banner.webp';
+import italianHome from '../Assets/piccolo-exterior.jpeg';
 import constructionHome from '../Assets/construction-hero-original.png';
 import renovationHome from '../Assets/renovation-hero-original.png';
 import tattooHome from '../Assets/tattoo-hero-original.png';
@@ -15,7 +15,7 @@ import artisanHome from '../Assets/artisan-template-home.png';
 
 const templates = [
   { name: 'Restaurant', eyebrow: 'Dining & hospitality', accent: 'terracotta', icon: '✦', image: restaurantHome, description: 'A warm, conversion-focused menu and reservation experience for memorable local dining.' },
-  { name: 'Italian Restaurant', eyebrow: 'Dining & hospitality', accent: 'italian', icon: '✦', image: italianHome, description: 'A refined Italian dining experience with seasonal recipes and classic hospitality.' },
+  { name: 'Italian Restaurant', eyebrow: 'Dining & hospitality', accent: 'italian', icon: '✦', image: italianHome, description: 'A warm, elevated Italian & Eritrean dining experience built to turn hungry visitors into regulars.' },
   { name: 'Cleaning', eyebrow: 'Home services', accent: 'sky', icon: '✳', image: cleaningHome, description: 'A polished service site that makes it simple to request a quote and book a clean.' },
   { name: 'Construction', eyebrow: 'Trades & building', accent: 'gold', icon: '◫', image: constructionHome, description: 'Built to establish credibility, showcase projects, and turn visits into estimate requests.' },
   { name: 'Renovation', eyebrow: 'Trades & building', accent: 'renovation', icon: '◈', image: renovationHome, description: 'A considered renovation template for refined spaces and ambitious transformations.' },
