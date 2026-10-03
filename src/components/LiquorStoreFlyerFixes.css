@@ -1,0 +1,2 @@
+/* Reserve enough space for every flyer price and add-to-cart action. */
+.flyer-grid{grid-auto-rows:330px}.flyer-product>div:last-child{min-height:164px}.flyer-product:nth-child(1) .flyer-image{height:440px}.flyer-product .flyer-image img{object-fit:cover;object-position:center}.flyer-product .quantity-control b{color:#10171c}@media(max-width:850px){.flyer-grid{grid-auto-rows:300px}.flyer-product:nth-child(1) .flyer-image{height:auto}}@media(max-width:600px){.flyer-grid{grid-auto-rows:285px}.flyer-product>div:last-child{min-height:152px}}

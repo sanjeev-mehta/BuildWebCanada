@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import './LiquorStoreDemo.css';
 import './LiquorStoreFlyer.css';
+import './LiquorStoreFlyerFixes.css';
 import './LiquorStoreFixes.css';
 import storefront from '../Assets/seven-star-storefront.jpeg';
 import logo from '../Assets/seven-star-logo-transparent.png';
